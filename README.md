@@ -49,3 +49,12 @@ Used for clean new OS install
     dpkg --configure -a  ---- for configuring all unpacked pkgs
     dpkg-reconfigure -a  ---- for configuring all installed pkgs
     ```
+- ##### upgrade
+    ```sh
+    pkexec apt upgrade -y
+    apt-get -f install  //fix broken dependencies
+    apt-get autoclean    //Remove some packages that are no longer installed on your system
+    apt-get autoremove
+    apt-get dist-upgrade  // last choice
+    ```
+    
