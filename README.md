@@ -57,4 +57,6 @@ Used for clean new OS install
     apt-get autoremove
     apt-get dist-upgrade  // last choice
     ```
-    
+- ##### bluetooth
+    service bluetooth restart
+
