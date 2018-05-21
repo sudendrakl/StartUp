@@ -60,3 +60,5 @@ Used for clean new OS install
 - ##### bluetooth
     service bluetooth restart
 
+- ##### Function Keys (fn)
+    sudo bash -c "echo 2 > /sys/module/hid_apple/parameters/fnmode"
