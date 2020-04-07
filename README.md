@@ -61,4 +61,6 @@ Used for clean new OS install
     service bluetooth restart
 
 - ##### Function Keys (fn)
+    create a file init.sh in /etc/init.d/
     sudo bash -c "echo 2 > /sys/module/hid_apple/parameters/fnmode"
+    update-rc.d init.sh defaults
