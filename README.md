@@ -64,3 +64,35 @@ Used for clean new OS install
     create a file init.sh in /etc/init.d/
     sudo bash -c "echo 2 > /sys/module/hid_apple/parameters/fnmode"
     update-rc.d init.sh defaults
+    
+- ##### Wifi on mac
+    ```
+    
+    Add the following lines to your sources.list:
+
+    deb http://http.kali.org/kali kali-rolling main contrib non-free
+    deb-src http://http.kali.org/kali kali-rolling main contrib non-free
+    or
+    deb https://mirrors.ocf.berkeley.edu/kali kali-rolling main non-free contrib
+    deb-src https://mirrors.ocf.berkeley.edu/kali kali-rolling main non-free contrib
+
+    Uninstall broadcom-sta-dkms
+
+    apt-get remove broadcom-sta-dkms
+
+    and
+
+    apt-get update && apt-get dist-upgrade
+    reboot
+
+    Update and re-install it:
+
+    apt-get update; apt-get install broadcom-sta-dkms; apt-get install linux-image-$(uname -r|sed 's,[^-]*-[^-]*-,,') linux-headers-$(uname -r|sed 's,[^-]*-[^-]*-,,') broadcom-sta-dkms
+
+    Load the wl module:
+
+    modprobe -r b44 b43 b43legacy ssb brcmsmac bcma
+    sudo modprobe wl
+
+    ```
+      
