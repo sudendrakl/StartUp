@@ -51,9 +51,6 @@ alias adb-open='adb shell am start -a android.intent.action.VIEW -d '
 
 alias adb-clear='adb shell pm clear com.nextbillion.groww'
 
-
-export jenkins_ip=172.16.0.28
-
 alias studio='~/Applications/android-studio/bin/studio.sh &'
 alias vysor='~/Applications/Vysor-linux-3.0.84.AppImage &'
 
